@@ -26,6 +26,7 @@ export function Home() {
   const {
     register,
     handleSubmit,
+    reset,
     watch,
     formState: { errors },
   } = useForm<NewCycleFormData>({
@@ -38,6 +39,7 @@ export function Home() {
 
   function handleCreateNewCycLe(data: NewCycleFormData) {
     console.log(data);
+    reset();
   }
 
   const task = watch("task");
