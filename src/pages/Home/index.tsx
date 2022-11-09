@@ -76,6 +76,12 @@ export function Home() {
   const isSubmitDisabled = !task;
 
   useEffect(() => {
+    if (activeCycle) {
+      document.title = `${minutes}:${seconds}`;
+    }
+  }, [minutes, seconds, activeCycle]);
+
+  useEffect(() => {
     let interval: number;
 
     if (activeCycle) {
