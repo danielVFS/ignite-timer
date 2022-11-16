@@ -1,9 +1,6 @@
 import { createContext, ReactNode, useReducer, useState } from "react";
-import {
-  Cycle,
-  CycleActionTypes,
-  cyclesReducer,
-} from "../reducers/cycles.reducer";
+import { CycleActionTypes } from "../reducers/cycles/actions";
+import { Cycle, cyclesReducer } from "../reducers/cycles/reducer";
 
 interface CreateCycleData {
   task: string;
